@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<title>File Tools</title>
+</head>
+<body>
+	<h1>FileTools</h1>
+	<div class="content">
+		<h3>PDF bir fayla jemle</h3>
+		<form action="/pdf_merge" method="POST" enctype="multipart/form-data">
+			<input type="file" name="files" multiple>
+			<button type="submit">Submit</button>
+		</form>
+		<hr>
+		<h3>WORD bir fayla jemle</h3>
+		<form action="/doc_merge" method="POST" enctype="multipart/form-data">
+			<input type="file" name="files" multiple>
+			<button type="submit">Submit</button>
+		</form>
+		<hr>
+		<h3>WORD -> PDF</h3>
+		<form action="/doc2pdf" method="POST" enctype="multipart/form-data">
+			<input type="file" name="files" multiple>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+</body>
+</html>
